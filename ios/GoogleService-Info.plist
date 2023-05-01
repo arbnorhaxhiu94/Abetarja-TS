@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>630960077196-o81fgi40a3956efh27pcg17hmbdke4j4.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.630960077196-o81fgi40a3956efh27pcg17hmbdke4j4</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>630960077196-9tr06mgr3mckulcohpr9uivktvhh0m1u.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAGDwfYF7UXBWeiqLSV_BEddEW0mOtXy68</string>
+	<key>GCM_SENDER_ID</key>
+	<string>630960077196</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.abetarja</string>
+	<key>PROJECT_ID</key>
+	<string>abetarja-arhax-7b04b</string>
+	<key>STORAGE_BUCKET</key>
+	<string>abetarja-arhax-7b04b.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:630960077196:ios:753596decf1129ea133ea9</string>
+	<key>DATABASE_URL</key>
+	<string>https://abetarja-arhax-7b04b.firebaseio.com</string>
+</dict>
+</plist>
