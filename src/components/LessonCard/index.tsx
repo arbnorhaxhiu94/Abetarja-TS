@@ -1,5 +1,5 @@
 import React, { FunctionComponent, memo, useEffect, useState } from "react";
-import {  Text, TouchableOpacity, View, ViewStyle } from "react-native";
+import {  Pressable, Text, TouchableOpacity, View, ViewStyle } from "react-native";
 import { Colors } from "../../assets/Colors";
 import { styles } from "./styles";
 import { Lesson } from "../../models/Lesson";
@@ -41,8 +41,8 @@ const LessonCard: FunctionComponent<LessonCardProps> = memo(({
     }, [isFocused]);
 
     return (
-        <TouchableOpacity
-            activeOpacity={0.95}
+        <Pressable
+            // activeOpacity={0.95}
             style={{ 
                 ...styles.container, 
                 shadowColor: textColor,
@@ -62,7 +62,7 @@ const LessonCard: FunctionComponent<LessonCardProps> = memo(({
                 </View>
             </LinearGradient>
             {showRibbon && Lotties.Ribbon(null, styles.ribbon)}
-        </TouchableOpacity>
+        </Pressable>
     )
 });
 

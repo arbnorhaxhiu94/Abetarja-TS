@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { Animated, ColorValue, Text, TextStyle, TouchableOpacity, View, ViewStyle } from "react-native";
+import { Animated, ColorValue, Pressable, Text, TextStyle, TouchableOpacity, View, ViewStyle } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
 import { Colors } from "../../assets/Colors";
 import { styles } from "./styles";
@@ -63,7 +63,7 @@ const CustomButton = ({
     }
 
     return (
-        <TouchableOpacity
+        <Pressable
             disabled={disabled}
             onPress={onPressIn}
             onLongPress={onLongPress}
@@ -72,8 +72,7 @@ const CustomButton = ({
                 styles.shadow,
                 shadowStyle,
                 { backgroundColor: shadowColor || shadowStyle?.backgroundColor || disabled ? Colors.GRAY : Colors.RED }
-            ]}
-            activeOpacity={1} >
+            ]} >
             <Animated.View 
                 style={[
                     styles.innerContainer,
@@ -101,7 +100,7 @@ const CustomButton = ({
                     }
                 </LinearGradient>
             </Animated.View>
-        </TouchableOpacity>
+        </Pressable>
     )
 }
 

@@ -1,13 +1,11 @@
 import { useNavigation } from "@react-navigation/native";
 import React, { useEffect, useState } from "react";
-import { Image, View } from "react-native";
+import { BackHandler, Platform, View } from "react-native";
 import { Colors } from "../../assets/Colors";
 import Icons from "../../assets/Icons";
-import { Images } from "../../assets/Images";
 import Lotties from "../../assets/Lotties";
 import CustomButton from "../../components/CustomButton";
 import { LinearGradientText } from 'react-native-linear-gradient-text';
-import IphoneType from "../../config/IsIphoneX/IphoneType";
 import { MainScreenNavigationType } from "../../navigation/Types/NavigationTypes";
 import BottomTabActions from "../../store/BottomTab/Actions";
 import { useAppDispatch, useAppSelector } from "../../store/store";
@@ -37,12 +35,20 @@ const LessonCompletedScreen: React.FC = () => {
     }
 
     useEffect(() => {
-        const randomNumber = Math.floor(Math.random() * 3);
+        let randomNumber = Math.floor(Math.random() * 3);
+        if (Platform.OS === "android" && randomNumber === 1) {
+            if (parseInt(Platform.Version.toString()) <= 31) randomNumber = 2;
+        }
         setIndex(randomNumber);
         SoundPlayerListener.add();
         SoundPlayerListener.playLessonCompletedSound();
         return () => { SoundPlayerListener.remove(); }
     }, []);
+
+    useEffect(() => {
+        BackHandler.addEventListener("hardwareBackPress", () => { return true; });
+    }, []);
+
 
     return (
         <View style={[styles.screen, { backgroundColor }]}>

@@ -1,5 +1,5 @@
 import React from "react";
-import { TextStyle, TouchableOpacity, View, ViewStyle } from "react-native";
+import { Pressable, TextStyle, TouchableOpacity, View, ViewStyle } from "react-native";
 import { Colors } from "../../assets/Colors";
 import Lotties from "../../assets/Lotties";
 import CustomText from "../CustomText";
@@ -50,9 +50,9 @@ const LessonLetterButton: React.FC<LessonLetterButtonProps> = ({
     }
 
     return (
-        <TouchableOpacity
+        <Pressable
             disabled={isDisabled}
-            activeOpacity={0.9}
+            // activeOpacity={0.9}
             onPress={onPress}
             style={[
                 styles.letterContainer,
@@ -69,7 +69,7 @@ const LessonLetterButton: React.FC<LessonLetterButtonProps> = ({
                 style={{...styles.letter, ...textStyle}} 
             />
             {isCorrectAnswer && Lotties.Check(undefined, getIconStyle())}
-        </TouchableOpacity>
+        </Pressable>
     )
 }
 

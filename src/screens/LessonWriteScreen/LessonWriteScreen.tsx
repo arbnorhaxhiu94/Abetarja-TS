@@ -32,7 +32,7 @@ const LessonWriteScreen = () => {
     }
 
     useEffect(() => {
-        BackHandler.addEventListener("hardwareBackPress", () => { return null; });
+        BackHandler.addEventListener("hardwareBackPress", () => { return true; });
     }, []);
 
     return (

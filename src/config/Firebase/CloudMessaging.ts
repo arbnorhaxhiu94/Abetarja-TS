@@ -12,8 +12,8 @@ class FirebaseCloudMessaging {
 
             return enabled;
         } else {
-            if (parseInt(Platform.Version.toString()) >= 33) {
-                const authStatus = await PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.POST_NOTIFICATIONS);
+            if (parseInt(Platform.Version.toString()) >= 32) {
+                const authStatus = await PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.POST_NOTIFICATION);
                 if (authStatus === "granted") return true;
                 else return false;
             }
